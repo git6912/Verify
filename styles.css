@@ -1,0 +1,243 @@
+/* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #36393f 0%, #2f3136 100%);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: #2f3136;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    position: relative;
+}
+
+.discord-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.discord-logo i {
+    font-size: 50px;
+    color: #5865f2;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.subtitle {
+    text-align: center;
+    color: #b9bbbe;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.progress-step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #40444b;
+    color: #b9bbbe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.progress-step.active {
+    background-color: #5865f2;
+    color: white;
+}
+
+.progress-line {
+    width: 60px;
+    height: 2px;
+    background-color: #40444b;
+    margin: 0 10px;
+}
+
+.form {
+    display: none;
+}
+
+.form.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #b9bbbe;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b9bbbe;
+}
+
+.input-with-icon input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    background-color: #40444b;
+    border: 1px solid #40444b;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.input-with-icon input:focus {
+    outline: none;
+    border-color: #5865f2;
+}
+
+.input-with-icon input::placeholder {
+    color: #72767d;
+}
+
+.password-strength {
+    display: flex;
+    margin-top: 8px;
+    gap: 4px;
+}
+
+.strength-bar {
+    height: 4px;
+    flex: 1;
+    background-color: #40444b;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #5865f2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #4752c4;
+}
+
+.success-animation {
+    text-align: center;
+    margin-bottom: 25px;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-animation i {
+    font-size: 60px;
+    color: #3ba55d;
+    margin-bottom: 15px;
+}
+
+.success-animation p {
+    color: #3ba55d;
+    font-weight: 500;
+}
+
+.resend-container {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.resend-container a {
+    color: #00aff4;
+    text-decoration: none;
+}
+
+.resend-container a:hover {
+    text-decoration: underline;
+}
+
+.success-message {
+    text-align: center;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.success-message i {
+    font-size: 80px;
+    color: #3ba55d;
+    margin-bottom: 20px;
+}
+
+.success-message h2 {
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    color: #b9bbbe;
+    margin-bottom: 25px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+}
